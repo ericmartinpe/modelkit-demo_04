@@ -1,12 +1,13 @@
 <%#INTERFACE
 parameter "name", :default=>"This Building Name"
 parameter "north_axis", :default=>30
+parameter "location", :default=>"CZ01"
 %>
 
 <%
 insert "general.pxt", :building_name=>name, :orientation=>north_axis
+insert "weather/#{location}.ddy"
 insert "geometry.pxt"
-insert "location.pxt"
 insert "constructions.pxt"
 
 insert 'zoneloads/office.imf', :zone_name=>'Zone A'
